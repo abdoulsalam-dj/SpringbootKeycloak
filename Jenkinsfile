@@ -3,16 +3,11 @@ pipeline {
     stages {
         stage(‘Build’) {
             steps {
-                dir(''){
-                    junit "C:/apache-maven-3.8.6/bin/mvn clean package"
-                }
+                sh "C:/apache-maven-3.8.6/bin/mvn clean package"
             }
-        }
         stage(‘Test’) {
             steps {
-                  dir(''){
-                    junit "C:/apache-maven-3.8.6/bin/mvn test"
-                }
+                  sh "C:/apache-maven-3.8.6/bin/mvn test"
             }
         }
 
