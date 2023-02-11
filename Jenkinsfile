@@ -4,7 +4,7 @@ pipeline {
         
         stage(‘Checkout’){
             git 'https://github.com/abdoulsalam-dj/SpringbootKeycloak.git'
-            mvnHome='C:\apache-maven-3.8.6'
+            mvnHome='C:/apache-maven-3.8.6'
         }
         stage(‘Build’) {
             steps {
